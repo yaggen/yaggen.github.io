@@ -17,5 +17,3 @@ This site is supposed to work as some type of portfolio/extension to my CV when 
 
 
 *This domain name was bought a couple of years ago on a late night for fun, i know it is pretty lame and not an outstanding name :)*
-
-*This domain name was bought a couple of years ago on a late night for fun, i know it is pretty lame and not an outstanding name :)
