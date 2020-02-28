@@ -22,7 +22,7 @@ Note that this was before i read up on ADS, and i was working at a Linux box at 
 
 ADS is a file attribute in NTFS file systems, all files on NTFS contains atleast one data stream, the default one is called $DATA - for example a .txt file could (should) contain text in the $DATA stream but could also contain an image in an **Alternate Data Stream**.
 
-![ADS PowerShell Example](/assets/images/ads_ps.png)
+![ADS PowerShell Example](assets/images/ads_ps.png)
 
 Example of viewing a file and all of it's streams with powershell, note that the file size appears to be 0 bytes.
 
