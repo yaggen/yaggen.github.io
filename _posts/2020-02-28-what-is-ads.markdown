@@ -2,7 +2,7 @@
 layout: post
 title:  "What is Alternate Data Streams?"
 date:   2020-02-28 22:56:44 +0000
-categories: CTF English Forensics
+categories: blog
 ---
 
 
