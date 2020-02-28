@@ -1,10 +1,14 @@
 ---
-layout: post
-title:  "What is Alternate Data Streams?"
-date:   2020-02-28 22:56:44 +0000
-categories: blog
+title: "What is Alternate Data Streams?"
+date: 2020-02-28 22:56:44 +0000
+categories:
+  - blog
+tags:
+  - CTF
+  - Forensics
+  - ADS
+  - English
 ---
-
 
 # Introduction
 
