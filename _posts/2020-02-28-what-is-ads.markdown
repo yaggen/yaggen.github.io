@@ -22,9 +22,9 @@ Note that this was before i read up on ADS, and i was working at a Linux box at 
 
 ADS is a file attribute in NTFS file systems, all files on NTFS contains atleast one data stream, the default one is called $DATA - for example a .txt file could (should) contain text in the $DATA stream but could also contain an image in an **Alternate Data Stream**.
 
-![ADS PowerShell Example](https://jackhack.se/assets/images/ads_ps.png)
-
 Example of viewing a file and all of it's streams with powershell, note that the file size appears to be 0 bytes.
+
+![ADS PowerShell Example](https://jackhack.se/assets/images/ads_ps.png)
 
 Alternate data streams have previously been used by certain malwares to hide data during attacks, and there is also a couple of methods describing how to run executeables from an ADS stream.
 
@@ -82,4 +82,6 @@ So by mounting the SMB share to my Windows host, and running the script from the
 
 ![ADSpy SMB Example](https://jackhack.se/assets/images/ads_smb.jpg)
 
-This was a first for me - to find a use case simple enough to write my own small script around, so with that in mind together with everything i learned about ADS and hacking Windows machines i really enjoyed this box! Except a writeut of the boox soon enough! 
+This was a first for me - to find a use case simple enough to write my own small script around, so with that in mind together with everything i learned about ADS and hacking Windows machines i really enjoyed this box! 
+
+Except a writeup of the box soon enough.
