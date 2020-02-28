@@ -10,8 +10,6 @@ tags:
   - English
 ---
 
-# Introduction
-
 Last day i was playing a "boot2root" CTF, and one of the most annoying parts was a 0-byte "empty" file appearantly containing an Alternate Data Stream (ADS). I had a hard time finding that the file contained an alternate stream, and an even harder time extracting the data contained in the stream. 
 
 This was my first time stumbling upon an Alternate Data Stream (ADS)
