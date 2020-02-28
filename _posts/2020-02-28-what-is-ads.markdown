@@ -22,7 +22,7 @@ Note that this was before i read up on ADS, and i was working at a Linux box at 
 
 ADS is a file attribute in NTFS file systems, all files on NTFS contains atleast one data stream, the default one is called $DATA - for example a .txt file could (should) contain text in the $DATA stream but could also contain an image in an **Alternate Data Stream**.
 
-![ADS PowerShell Example](assets/images/ads_ps.png)
+![ADS PowerShell Example](https://jackhack.se/assets/images/ads_ps.png)
 
 Example of viewing a file and all of it's streams with powershell, note that the file size appears to be 0 bytes.
 
@@ -80,6 +80,6 @@ for f in files:
 
 So by mounting the SMB share to my Windows host, and running the script from the root of this share, i was now able to find and read the data streams.
 
-![ADSpy SMB Example](/assets/images/ADS_SMB.png)
+![ADSpy SMB Example](https://jackhack.se/assets/images/ADS_SMB.png)
 
 This was a first for me - to find a use case simple enough to write my own small script around, so with that in mind together with everything i learned about ADS and hacking Windows machines i really enjoyed this box! Except a writeut of the boox soon enough! 
