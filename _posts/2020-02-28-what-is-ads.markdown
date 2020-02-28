@@ -80,6 +80,6 @@ for f in files:
 
 So by mounting the SMB share to my Windows host, and running the script from the root of this share, i was now able to find and read the data streams.
 
-![ADSpy SMB Example](https://jackhack.se/assets/images/ADS_SMB.png)
+![ADSpy SMB Example](https://jackhack.se/assets/images/ads_smb.jpg)
 
 This was a first for me - to find a use case simple enough to write my own small script around, so with that in mind together with everything i learned about ADS and hacking Windows machines i really enjoyed this box! Except a writeut of the boox soon enough! 
