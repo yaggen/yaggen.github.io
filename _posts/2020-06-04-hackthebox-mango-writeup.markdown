@@ -128,8 +128,8 @@ Detta är såklart ingenting man vill göra för hand, tur att det finns script 
 
 Efter att ha kört scriptet mot staging-sidan fick jag fram följande inloggningsuppgifter:
 
-*mango:h3mXK8RhU~f{]f5H*
-*admin:t9KcS3>!0B#2*
+* mango:h3mXK8RhU~f{]f5H*
+* admin:t9KcS3>!0B#2*
 
 # User
 Eftersom jag kunde se att port 22 var öppen vid Nmap-scanningen testade jag att logga in via SSH, användaren admin fungerade inte men mango-kontot gav access.
