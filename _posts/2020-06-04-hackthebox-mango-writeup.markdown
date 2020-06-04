@@ -93,10 +93,10 @@ Eftersom MongoDB är en NoSQL-databas bestämde jag mig för att testa NoSQL-inj
 # NoSQL Injection (MongoDB)
 Några variabler att hålla koll på vid testning: 
 
-\$eq     "equal to"
-\$gt     "greater than"
-\$gte    "greater than or equal to"
-\$ne     "not equal to"
+*\$eq     "equal to"
+*\$gt     "greater than"
+*\$gte    "greater than or equal to"
+*\$ne     "not equal to"
 
 Väl i Burp interceptade jag inloggnings-requesten & kollade vilken respons jag fick när jag testade logga in med användarnamnet *admin* & lösenordet *test*, responskoden var 200 OK
 
