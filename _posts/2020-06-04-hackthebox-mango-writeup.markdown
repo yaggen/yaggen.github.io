@@ -53,7 +53,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Inte så mycket som sticker ut efter att ha kört nmap, däremot uppmärksammade jag ett SSL-cerifikat som exponerade någon form av staging-domän och bestämde mig för att titta på den. 
 
-*SSL Certifikatet*
+### SSL Certifikatet
 
 ssl-cert: Subject:
 commonName=**staging-order.mango.htb**organizationName=Mango Prv Ltd./stateOrProvinceName=None/countryName=IN
