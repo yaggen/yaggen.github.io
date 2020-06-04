@@ -1,5 +1,5 @@
 ---
-title: "What is Alternate Data Streams?"
+title: "HackThebox-Mango-Writeup"
 date: 2020-06-4 23:07:44 +0000
 categories:
   - blog
@@ -8,7 +8,6 @@ tags:
   - HTB
   - Swedish
 ---
-# HackTheBox - Mango - Writeup
 
 Jag ligger ett par veckor efter i planeringen, och skulle egentligen publicerat den här wirteupen för länge sedan, men det går inte alltid som man vill! Jag hoppas kunna fylla på här med mer innehåll snarast möjligt. 
 
