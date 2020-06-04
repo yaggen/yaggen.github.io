@@ -59,6 +59,8 @@ ssl-cert: Subject:
 commonName=**staging-order.mango.htb**organizationName=Mango Prv Ltd./stateOrProvinceName=None/countryName=IN
 ....
 
+Så jag drar igång gobuster mot staging domänen för att se om där finns något spännande, jag letar efter php-filer med växeln -x eftersom index-filen är av typen php.
+
 **gobuster dir -u https://staging-order.mango.htb -k -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 10 -x php**
 ~~~
 
@@ -82,7 +84,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 Progress: 17365 / 220561 (7.87%)
 ~~~
 
-En körning med gobuster visar att det finns en analytics-applikation jag kan komma åt, det här visade sig vara ett s.k. "Rabbit hole" och ledde ingenstans, därför kommer jag inte skriva mer om det.
+Detta visar att det finns en analytics-applikation jag kan komma åt, det här visade sig vara ett s.k. "Rabbit hole" och ledde ingenstans, därför kommer jag inte skriva mer om det.
 
 På staging-domänen finns annars bara en inloggningssida, och som vanligt när det gäller HTB-maskiner brukar namnet i sig vara en ledtråd & så även denna gång mango = mongoDB? 
 
