@@ -89,6 +89,7 @@ Detta visar att det finns en analytics-applikation jag kan komma åt, det här v
 På staging-domänen finns annars bara en inloggningssida, och som vanligt när det gäller HTB-maskiner brukar namnet i sig vara en ledtråd & så även denna gång mango = mongoDB? 
 
 ![Staging-domän](https://jackhack.se/assets/images/staging.png)
+{: .full}
 
 Eftersom MongoDB är en NoSQL-databas bestämde jag mig för att testa NoSQL-injektioner, efter att ha kollat upp NoSQL-injektioner hos [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/NoSQL%20Injection) startade jag upp Burp suite..
 
@@ -103,11 +104,13 @@ Några variabler att hålla koll på vid testning:
 Väl i Burp interceptade jag inloggnings-requesten & kollade vilken respons jag fick när jag testade logga in med användarnamnet *admin* & lösenordet *test*, responskoden var 200 OK
 
 ![Burp](https://jackhack.se/assets/images/burp_1.png)
+{: .full}
 
 Samma request med användarnamnet admin & lösenordet *\[$ne]test* (alltså **INTE** *test*) fick jag istället responskoden 302 Found
 
 
 ![Burp 302](https://jackhack.se/assets/images/burp_2.png)
+{: .full}
 
 Testet indikerar på att det finns en användare vid namn admin, som inte har lösenordet *test* och kan logga in på sidan. 
 
