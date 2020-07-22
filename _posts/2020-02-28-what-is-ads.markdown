@@ -22,7 +22,7 @@ ADS is a file attribute in NTFS file systems, all files on NTFS contains atleast
 
 Example of viewing a file and all of it's streams with powershell, note that the file size appears to be 0 bytes.
 
-![ADS PowerShell Example](https://jackhack.se/assets/images/ads_ps.png)
+![ADS PowerShell Example](https://jackhack.se/assets/images/ADS/ads_ps.png)
 
 Alternate data streams have previously been used by certain malwares to hide data during attacks, and there is also a couple of methods describing how to run executeables from an ADS stream.
 
@@ -78,7 +78,7 @@ for f in files:
 
 So by mounting the SMB share to my Windows host, and running the script from the root of this share, i was now able to find and read the data streams.
 
-![ADSpy SMB Example](https://jackhack.se/assets/images/ads_smb.jpg)
+![ADSpy SMB Example](https://jackhack.se/assets/images/ADS/ads_smb.jpg)
 
 This was a first for me - to find a use case simple enough to write my own small script around, so with that in mind together with everything i learned about ADS and hacking Windows machines i really enjoyed this box! 
 
