@@ -1,6 +1,6 @@
 ---
-title: "HackThebox: Cascade Writeup"
-date: 2020-07-26 23:18:44 +0000
+title: "HackTheBox: Cascade Writeup"
+date: 2020-07-26 11:18:44 +0000
 categories:
   - blog
 tags:
@@ -8,9 +8,9 @@ tags:
   - HTB
   - English
 ---
-This is a writeup of the machine Cascade, it's a windows box with the difficulty rating medium. 
+This is a writeup of the machine Cascade on HackTheBox, it's a windows box with the difficulty rating medium. 
 
-The process of rooting this box includes quite a bit Active Directory enumeration, decrypting VNC password, and some reversing of a c# executeable. 
+The process of rooting this box includes quite a bit Active Directory enumeration, decrypting a VNC password, and some reversing of a c# executeable. 
 ![Cascade Info](https://jackhack.se/assets/images/cascade/cascade_info.png)
 
 # Recon
