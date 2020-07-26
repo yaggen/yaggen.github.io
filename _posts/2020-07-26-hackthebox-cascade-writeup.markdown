@@ -8,11 +8,10 @@ tags:
   - HTB
   - English
 ---
-![Cascade Info](https://jackhack.se/assets/images/cascade/cascade_info.png)
-
 This is a writeup of the machine Cascade, it's a windows box with the difficulty rating medium. 
 
-The process of rooting this box includes quite a bit Active Directory enumeration, decrypting VNC password, and some reverse engineering. 
+The process of rooting this box includes quite a bit Active Directory enumeration, decrypting VNC password, and some reversing of a c# executeable. 
+![Cascade Info](https://jackhack.se/assets/images/cascade/cascade_info.png)
 
 # Recon
 
@@ -133,6 +132,7 @@ smb:\> prompt off
 smb:\> recurse on
 smb:\> mget *
 ~~~
+# User
 {: .language-bash}
 When browsing the files locally two files caught my interest
 
@@ -247,6 +247,7 @@ namespace CascAudiot
 After running the modified executeable my commandline returns the following:
 ![cmd output](https://jackhack.se/assets/images/cascade/modcmd.png)
 
+# Root 
 Now i can proceed to get a evil-winrm shell with the new credentials for ArkSvc and the password w3lc0meFr31nd.
 
 When running the command *whoami /all* to list group memberships i see that the user is a member of the AD Recycle Bin group
