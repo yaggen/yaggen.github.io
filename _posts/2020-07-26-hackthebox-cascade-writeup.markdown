@@ -13,6 +13,7 @@ This is a writeup of the machine Cascade on HackTheBox, it's a windows box with 
 The process of rooting this box includes quite a bit Active Directory enumeration, decrypting a VNC password, and some reversing of a c# executeable. 
 
 ![Cascade Info](https://jackhack.se/assets/images/cascade/cascade_info.png)
+{: .full}
 
 # Recon
 
@@ -156,14 +157,17 @@ drwxr-xr-x 6 kali kali 4096 Jul 16 16:16 ..
 The email containing meeting notes mentions a TempAdmin account used for a network migration, using the same password as the standard Administrator account
 
 ![Email](https://jackhack.se/assets/images/cascade/email.png)
+{: .full}
 
 And the VNC Install.reg contains a password in HEX for the VNC service. Since VNC uses a hardcoded DES key for encrypting the passwords stored in registry i should be able to decrypt the password using metasploit
 
 ![VNC password](https://jackhack.se/assets/images/cascade/vncpwd.png)
+{: .full}
 
 The decryption is made using metasploits IRB-shell.
 
 ![Metasploit decryption](https://jackhack.se/assets/images/cascade/decrypt.png)
+{: .full}
 
 The password decrypts to "sT333ve2" 
 
@@ -184,16 +188,18 @@ b210ea4039b8af6acc4a4a4a2ef45dfc
 With the s.smith account i could now access the audit$ SMB share, so i connected and downloaded the contents of this share aswell. 
 
 ![SMB as s.smith](https://jackhack.se/assets/images/cascade/ssmith_smb.png)
+{: .full}
 
 Thats some type of executable file but also a database directory, after opening the database with sqlitebrowser i saw there was once again a base64 encoded password for the ArkSvc user in the "ldap" table.
 
 ![SQL Browser](https://jackhack.se/assets/images/cascade/sql.png)
+{: .full}
 
 But when decrypting this password it looks like jibberish, so i guess the password is somehow encrypted. 
 
 Switching to my windows machine and opening the executable file with dnSpy, i can see that the program retrieves the encrypted string from the database and uses the key "c4scadek3y654321" to decrypt it. 
 ![CascAudit.exe](https://jackhack.se/assets/images/cascade/cascaudit.png)
-
+{: .full}
 
 
 ~~~
@@ -227,6 +233,7 @@ string str = string.Empty;
 I used dnSpy to rewrite this function to just take the encrypted password as input and return the decrypted password and saved the executeable as CascAuditMod.exe
 
 ![CascAudit Modified](https://jackhack.se/assets/images/cascade/cascmod.png)
+{: .full}
 
 ~~~
 namespace CascAudiot
@@ -254,6 +261,7 @@ Now i can proceed to get a evil-winrm shell with the new credentials for ArkSvc 
 When running the command *whoami /all* to list group memberships i see that the user is a member of the AD Recycle Bin group
 
 ![AD Groups](https://jackhack.se/assets/images/cascade/AdGroup.png)
+{: .full}
 
 Quick googling-fu shows [how]( https://book.hacktricks.xyz/windows/active-directory-methodology/privileged-accounts-and-token-privileges) to elevate this for privilege escalation 
 
@@ -289,4 +297,4 @@ baCT3r1aN00dles
 Since i remember the Email note saying that the TempAdmin account has the same password as the standard Administrator account i used this to get a shell as Administrator and grab the root flag.
 
 ![Root flag](https://jackhack.se/assets/images/cascade/rootflag.png)
-
+{: .full}
