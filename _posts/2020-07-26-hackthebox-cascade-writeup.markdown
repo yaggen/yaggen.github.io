@@ -11,6 +11,7 @@ tags:
 This is a writeup of the machine Cascade on HackTheBox, it's a windows box with the difficulty rating medium. 
 
 The process of rooting this box includes quite a bit Active Directory enumeration, decrypting a VNC password, and some reversing of a c# executeable. 
+
 ![Cascade Info](https://jackhack.se/assets/images/cascade/cascade_info.png)
 
 # Recon
@@ -82,7 +83,7 @@ user:[j.allen] rid:[0x46e]
 user:[i.croft] rid:[0x46f]
 ~~~
 {: .language-bash}
-I was able to connect without authentication, and using the command *enumdomusers* i was able to make a list of possible users. I could also get a list of all groups in the domain, but nothing more interesting from RPC, so i switched over to ldap-enumeration using **ldapsearch**. 
+I was able to connect without authentication, and using the command *enumdomusers* i managed to make a list of possible users. I could also get a list of all groups in the domain, but nothing more interesting from RPC, so i switched over to ldap-enumeration using **ldapsearch**. 
 
 ~~~
 kali@kali:~$ ldapsearch -LLL -x -H ldap://10.10.10.182/ -b '' -s base '(objectclass=*)
@@ -108,8 +109,8 @@ distinguishedName: CN=Ryan Thompson,OU=Users,OU=UK,DC=cascade,DC=local
 cascadeLegacyPwd: clk0bjVldmE= 
 ~~~
 {: .language-bash}
-From the LDAP enumeration i saw an attribute that stood ut "cascadeLegacypwd" wich seems to be a base64 encoded password.
-so by decoding that string i got possible credentials for the user r.thompson, using this credentials to enumerate SMB will be my next step. 
+From the LDAP enumeration i saw an attribute that stood out "cascadeLegacyPwd" wich seems to be a base64 encoded password.
+By decoding that string i got possible credentials for the user r.thompson, using this credentials to enumerate SMB will be my next step. 
 
 ~~~
 kali@kali:~$ smbclient -L //10.10.10.182/ -U "r.thompson%rY4n5eva"
@@ -222,7 +223,7 @@ string str = string.Empty;
 						}
 						--snip--
 ~~~
-{: .language-c#}
+{: .language-csharp}
 I used dnSpy to rewrite this function to just take the encrypted password as input and return the decrypted password and saved the executeable as CascAuditMod.exe
 
 ![CascAudit Modified](https://jackhack.se/assets/images/cascade/cascmod.png)
@@ -243,7 +244,7 @@ namespace CascAudiot
 			Console.Write(value);
 		}
 ~~~
-{: .language-c#}
+{: .language-csharp}
 After running the modified executeable my commandline returns the following:
 ![cmd output](https://jackhack.se/assets/images/cascade/modcmd.png)
 
