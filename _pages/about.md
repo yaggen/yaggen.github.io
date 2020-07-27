@@ -10,6 +10,8 @@ I'm 23 years old, currently studying Network technology and IT-security at Unive
 
 In my spare time i like to hack on different CTF challenges such as [HackTheBox](https://hackthebox.eu), [Vulnhub](https://vulnhub.com) or at live events, i aslo often work on one or multiple personal projects when there is time.
 
+I have a homelab running that i probably should give some more love and post about..
+
 
 ## This site.
 
