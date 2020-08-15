@@ -178,6 +178,6 @@ listening on [any] 9001 ...
 
 After successfully connecting to the box as **sysadmin** my reverse shell executed and i got root on this box.
 
-![Root](https://jackhack.se/assets/images/traceback/root2.png)
+![Root](https://jackhack.se/assets/images/traceback/root.png)
 {: .full}
 
