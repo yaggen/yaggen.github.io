@@ -186,7 +186,7 @@ This part took me like litteraly a whole day to figure out, since there was a fe
 I had no luck with that, since the login-page mentions "email" instead of "username" i suspected that i needed a full username like *user@company.tld*, i grabbed all usernames and the corresponding company name together with the [country-top level domains](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains) that was specified on the *clients.php* page and made a wordlist from these.
 (Probably this part should be scripted :))
 
-![User List](https://jackhack.se/assets/images/quick/userlist.png)
+![User List](https://jackhack.se/assets/images/quick/userslist.png)
 {: .full}
 Running wfuzz to quickly test all users i found one that got a 302 Redirect when logging in. 
 
