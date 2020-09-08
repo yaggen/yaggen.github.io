@@ -12,6 +12,7 @@ tags:
 This week's box will be Remote from HackTheBox, its a Windows box with the difficulty rating Easy. The process of rooting this box contains taking advantage of a poorly configured **NFS** share, exploiting an **Authenticated Remote Code Execution** vulnerability in a popular CMS, and using a pretty recent CVE to decrypt **TeamViewer** passwords from Windows registry.
 
 ![Remote Info](https://jackhack.se/assets/images/remote/remote_info.png)
+{: .full}
 
 # Recon
 
@@ -143,6 +144,7 @@ Spending a few minutes inside this NFS-share i found a file inside **App_Data** 
 {: .language-bash}
 
 ![Strings](https://jackhack.se/assets/images/remote/strings.png)
+{: .full}
 
 Running strings again but this time also grep:ing for "admin"
 
@@ -152,6 +154,7 @@ Running strings again but this time also grep:ing for "admin"
 ~~~
 {: .language-bash}
 ![strings_grep.png](https://jackhack.se/assets/images/remote/strings_grep.png)
+{: .full}
 
 One of the first lines reveals a SHA1 hashed password, cracking this with *john* will provide me with admin credentials to the Umbraco CMS.
 
@@ -213,10 +216,12 @@ http://remote.htb/install
 Redirects me to umbraco's login page
 
 ![Umbraco login page](https://jackhack.se/assets/images/remote/install.png)
+{: .full}
 
 Logging in with the obtained credentials works, checking the "Help" menu also reveals the version of Umbraco
 
 ![Version](https://jackhack.se/assets/images/remote/version.png)
+{: .full}
 
 Using searchsploit to check for any known vulnerabilies in Umbraco
 
@@ -318,6 +323,7 @@ print("End");
 Starting a python3 web server, and opening a netcat listener then running the exploit gives me an initial shell.
 
 ![Shell](https://jackhack.se/assets/images/remote/shell.png)
+{: .full}
 
 Getting **user.txt**
 ~~~
