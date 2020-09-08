@@ -223,7 +223,7 @@ Logging in with the obtained credentials works, checking the "Help" menu also re
 ![Version](https://jackhack.se/assets/images/remote/version.png)
 {: .full}
 
-Using searchsploit to check for any known vulnerabilies in Umbraco
+Using searchsploit to check for any known vulnerabilities in Umbraco
 
 ~~~
 ┌──(kali@kali)-[~/boxes/remote]
