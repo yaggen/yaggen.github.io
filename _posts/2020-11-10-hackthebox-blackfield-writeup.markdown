@@ -459,7 +459,7 @@ Info: Establishing connection to remote endpoint
 # Resources
 Resources is where i will put links without context used while solving the boxes, these can be used to further understand parts of the writeup :)
 
-* https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html#-dump-ntdsdit
-* https://roberthosborne.com/privesc
-* https://hackinparis.com/data/slides/2019/talks/HIP2019-Andrea_Pierini-Whoami_Priv_Show_Me_Your_Privileges_And_I_Will_Lead_You_To_System.pdf
+* [https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html#-dump-ntdsdit](https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html#-dump-ntdsdit)
+* [https://roberthosborne.com/privesc](https://roberthosborne.com/privesc)
+* [https://hackinparis.com/data/slides/2019/talks/HIP2019-Andrea_Pierini-Whoami_Priv_Show_Me_Your_Privileges_And_I_Will_Lead_You_To_System.pdf](https://hackinparis.com/data/slides/2019/talks/HIP2019-Andrea_Pierini-Whoami_Priv_Show_Me_Your_Privileges_And_I_Will_Lead_You_To_System.pdf)
 
