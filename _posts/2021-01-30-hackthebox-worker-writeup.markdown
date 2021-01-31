@@ -1,6 +1,6 @@
 ---
 title: "HackTheBox: Worker Writeup"
-date: 2021-01-30 00:10:00 +0000
+date: 2021-01-31 21:05:00 +0000
 categories:
   - blog
 tags:
