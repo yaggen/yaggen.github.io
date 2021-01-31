@@ -216,6 +216,6 @@ This seemed to work just fine, i was now able to access the administrator accoun
 # Resources
 Resources is where i will put links without context used while solving the boxes, these can be used to further understand parts of the writeup :)
 
-* https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell
-* https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops
-* https://www.perforce.com/blog/vcs/svn-commands-cheat-sheet
+* [https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell)
+* [https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops)
+* [https://www.perforce.com/blog/vcs/svn-commands-cheat-sheet](https://www.perforce.com/blog/vcs/svn-commands-cheat-sheet)
