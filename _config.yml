@@ -18,7 +18,7 @@ title: JackHack
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   This is my hobby project, back log or extension to my CV. I try
-to post writeups of CTF's i compete in or post about other tech-related projects
+  to post writeups of CTF's i compete in or post about other tech-related projects
 twitter_username: jackkhax
 github_username: yaggen
 minimal_mistakes_skin: "dark"
