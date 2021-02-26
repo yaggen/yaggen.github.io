@@ -9,15 +9,13 @@ tags:
   - English
 ---
 
-![Worker Info](https://jackhack.se/assets/images/worker/worker_infocard.png)
-{: .full}
-
 Time for another writeup! This time it's the box Worker from HackTheBox. Worker is a windows box rated at medium difficulty. 
 
 Too root this box, we will have to use Subversion(SVN) to clone a repository and find some old configuration files, from there on we will abuse extensive permissions within Azure DevOps to be able to upload a web-shell which we will use to get shell access to the box. Then perform basic enumeration and dig through more configuration files until we can escalate into a more privileged user. 
-
 The path to root is also via Azure DevOps but this time abusing the Pipelines-function to get root shell access.
 
+![Worker Info](https://jackhack.se/assets/images/worker/worker_infocard.png)
+{: .full}
 
 # Recon
 
